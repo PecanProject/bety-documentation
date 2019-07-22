@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14 Database Constraints | Biofuel Ecophysiological Traits and Yields Database</title>
-  <meta name="description" content="14 Database Constraints | Biofuel Ecophysiological Traits and Yields Database" />
+  <title>Biofuel Ecophysiological Traits and Yields Database</title>
+  <meta name="description" content="Biofuel Ecophysiological Traits and Yields Database" />
   <meta name="generator" content="bookdown 0.12.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14 Database Constraints | Biofuel Ecophysiological Traits and Yields Database" />
+  <meta property="og:title" content="Biofuel Ecophysiological Traits and Yields Database" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14 Database Constraints | Biofuel Ecophysiological Traits and Yields Database" />
+  <meta name="twitter:title" content="Biofuel Ecophysiological Traits and Yields Database" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="complex-joins-in-the-web-interface.html">
-<link rel="next" href="modifying-the-betydb-schema.html">
+
+<link rel="next" href="about-betydb-database-description-and-users-guide.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -284,217 +284,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="database-constraints" class="section level1">
-<h1><span class="header-section-number">14</span> Database Constraints</h1>
-<p>BETYdb contains database level constraints. Building constraints into the SQL schema provides a way of explicitly defining the meaning of the database model and its intended functionality.</p>
-<div id="types-of-constraints" class="section level2">
-<h2><span class="header-section-number">14.1</span> Types of Constraints</h2>
-<ol style="list-style-type: decimal">
-<li><strong>Value</strong> constraints include:
-<ul>
-<li>range constraints on continuous variables</li>
-<li>“enum” constraints on, for example, state or country designations; this is a form of normalization (“US” and “USA” should be folded into a common designation); forms utilized by SELECT controls should perhaps be favored</li>
-<li>consistency constraints: for example <code>(year, month, day)</code> can’t be <code>(2001, 2, 29)</code>; or the city, state, and country specified for a site should be consistent with the latitude and longitude; (this may be hard to check, but some level of checking may not be too difficult: for example, <code>SELECT * FROM sites WHERE country IN ('US', 'United States', 'USA') AND lon &gt; 0;</code> shouldn’t return any rows)</li>
-</ul></li>
-<li><strong>Foreign key</strong> constraints
-<ul>
-<li>Prevents accidental deletion of meta-data records in lookup tables</li>
-<li>Prevents entry of primary data without contextual information required to interpret the data</li>
-</ul></li>
-<li><strong>Non-NULL</strong> constraints
-<ul>
-<li>Constrains which fields can not be empty</li>
-</ul></li>
-<li><strong>Uniqueness</strong> constraints
-<ul>
-<li>These define what makes a row unique, by designating a ‘natural key’ - a combination of fields that make a row unique (distinct from primary keys that are used in cross-table joins).</li>
-</ul></li>
-</ol>
-<p>All constraints are defined in the database schema, <a href="https://github.com/PecanProject/bety/blob/master/db/structure.sql" target="_blank"><code>db/structure.sql</code></a></p>
+<div id="header">
+<h1 class="title">Biofuel Ecophysiological Traits and Yields Database</h1>
+<p class="author"><em>By: BETYdb Team</em></p>
+<p class="date"><em>2019-07-22</em></p>
 </div>
-<div id="value-constraints-including-some-not-null-constraints" class="section level2">
-<h2><span class="header-section-number">14.2</span> Value Constraints (including some NOT NULL constraints)</h2>
-<div id="global" class="section level3 unnumbered">
-<h3>Global</h3>
-<ul>
-<li>Text fields should not have leading or trailing white spaces. (Are there any fields for which this is not the case?)<br />
-This can be checked with <code>CHECK(TRIM(FROM &lt;columnname&gt;) = &lt;columnname&gt;)</code> Probably sequences of two or more consecutive whitespace characters should be forbidden as well except for various free-form textual columns such as <code>traits.notes</code>. This can be checked with <code>CHECK(REGEXP_REPLACE(TRIM(FROM &lt;columnname&gt;), ' +', ' ') = &lt;columnname&gt;)</code> For convenience, we should probably define a function so we can just do something like <code>CHECK(is_normalized(&lt;columnname&gt;))</code> .</li>
-</ul>
-</div>
-<div id="covariates-1" class="section level3 unnumbered">
-<h3>covariates:</h3>
-<ul>
-<li>Check that <code>level</code> is in the range corresponding to variable referenced by <code>variable_id</code>.</li>
-<li>Check that <code>n</code> is positive (or &gt; 1 ?) if it is not NULL.</li>
-<li>Check that <code>statname</code> and <code>stat</code> are either both NULL or both non-NULL. (Alternatively, ensure that <code>statname</code> is non-NULL and that it equals the empty string if and only if <code>stat</code> is NULL.)</li>
-<li>Check that <code>statname</code> is one of “SD”, “SE”, “MSE”, “95%CI”, “LSD”, “MSD” or possibly “”. Consider creating an ENUM data type for this.</li>
-</ul>
-</div>
-<div id="managements-1" class="section level3 unnumbered">
-<h3>managements:</h3>
-<ul>
-<li>mgmttype: Constrain to one of the values in the web interface’s dropdown. (Is there any reason not to store these in the variables table, or in a separate lookup table? If we record units and range restrictions, this would be useful. On the other hand, if we continue to use a static list of management types, we should create a new ENUM type in the database to enumerate the allowed values.</li>
-<li>level: This should always be non-negative (except in the case that we want to use the special value -999 for mgmttypes where a level has no meaning; if so, we should also constrain level to be non-NULL).</li>
-<li>units: Should be constrained to a known set of values—in fact, on a per mgmttype basis; currently there are several varying designations for the same unit in a number of cases</li>
-<li>dateloc: Should be constrained to specific values. Since there is a value (9) designated as meaning “no data”, this column should be constrained to be NOT NULL. We should perhaps constraint this column to have this value if <code>date</code> is NULL.</li>
-<li>All values of citation_id in managements should also be associated with treatment via citations_treatments table. Does thie mean: The management should be associated with (at least) one of the treatments associated with the citation specified by <code>citation_id</code>?</li>
-</ul>
-</div>
-<div id="species" class="section level3 unnumbered">
-<h3>species:</h3>
-<ul>
-<li>Ensure scientificname LIKE CONCAT(genus, ‘‘, species, ‘%’)</li>
-<li>Ensure genus is capitalized (and consists of a single word?).</li>
-</ul>
-</div>
-<div id="sites-1" class="section level3 unnumbered">
-<h3>sites:</h3>
-<ul>
-<li>lat (replaced by geometry)</li>
-<li>lon (replaced by geometry)</li>
-<li>som: 0 – 100</li>
-<li>mat: range: -50, 150</li>
-<li>masl: (replaced by geometry)</li>
-<li>map: Minimum is zero. Maximum = ?</li>
-<li>local_time: Range should be -12 to +12. This might more aptly be called timezone. A comment should clarify the meaning; I assume it should mean something like “the number of hours local standard time is ahead of GMT”. Some kind of check might be possible to ensure consistence with the longitude.</li>
-<li>sand_pct, clay_pct: These both have range 0–100, and sand_pct + clay_pct should be &lt;= 100.</li>
-<li>sitename: Unique and non-null (see below); also, ensure it does not have leading or trailing white space and no internal sequences of 2 or more consecutive spaces. This will make the uniqueness constraint more meaningful. (A similar white space constraint should apply to all textual keys in all tables.)</li>
-</ul>
-</div>
-<div id="traits-1" class="section level3 unnumbered">
-<h3>traits:</h3>
-<p>It isn’t clear what a natural key would be, but it would probably involve several foreign key columns. Perhaps (site_id, specie_id, cultivar_id, treatment_id, variable_id, and some combination of date and time fields. But it is important to have some sort of uniqueness constraint other than just the default unique-id constraint. For example, if the web-interface user accidentally presses the Create button on the New Trait page twice, two essentially equal trait rows will be created (they will differ only in the id and timestamp columns). See Uniqueness Constraints below!</p>
-<ul>
-<li>date, dateloc, time, timeloc, date_year, date_month, date_day, time_hour, time_minute: Check date and time fields consistency: For example, if dateloc is 91—97, date and date_year should both be NULL (but maybe old data doesn’t adhere to this?). If date_year, date_month, or date_day is NULL, date should be NULL as well. Also, dateloc and timeloc should be constrained to certain meaningful values. (See comment above on managements.dateloc.)</li>
-<li>mean: Check mean is in the range corresponding to the variable referenced by variable_id.</li>
-<li>n, stat, statname: n should always be positive; if n = 1, statname should be NULL. statname should be one of a specified set of values. (See comments above on covariates.stat and covariates.statname.)</li>
-<li>specie_id and cultivar_id need to be consistent with one another.</li>
-<li>access_level: Range is 1–4.</li>
-</ul>
-</div>
-<div id="treatments-1" class="section level3 unnumbered">
-<h3>treatments:</h3>
-<ul>
-<li>name: Possibly standardize capitalization of names (easiest would be to have all words in all names not capitalized except for proper names and unit names where appropriate; this would convey the most information because (e.g.) author names would stand out from other words). This would need to be done manually to avoid converting proper names to lowercase. As stated below, names should be unique within a citation and site pair; standardizing capitalization will make this constraint more meaningful.</li>
-<li>definition: Treat captitalization similarly to that for names.</li>
-<li>control: There can be more than one control treatment per citation (currently there are). Below in the uniqueness section, it is stated that there can be only one control for a given citation <em>and site</em>.</li>
-<li>Since (as stated below) names should be unique within a citation and site pair, standardizing capitalization will make this constraint more meaningful.</li>
-</ul>
-</div>
-<div id="users" class="section level3 unnumbered">
-<h3>users:</h3>
-<ul>
-<li>login: Enforce any constraints required by the Rails interface.</li>
-<li>email: Constrain to valid email addresses.</li>
-<li>country: Constrain to valid country names.</li>
-<li>area: This currently isn’t very meaningful. Perhaps this should be an ENUM. Alteratively, it could be constraint to be some category word followed by free-form text.</li>
-<li>access_level: Range is 1 - 4.</li>
-<li>page_access_level: Range is 1 - 4.</li>
-<li>postal_code: Ideally, this should be constrained according to the country. Since most users are (currently) from the U.S., we could at least constraint U.S. postal codes to “NNNNNN” or “NNNNNN-NNNN”.</li>
-</ul>
-</div>
-<div id="yields-see-also-traits-constraints" class="section level3 unnumbered">
-<h3>yields: [see also traits constraints]</h3>
-<ul>
-<li>mean: mean should be in the range of plausible yield values.</li>
-</ul>
-</div>
-</div>
-<div id="foreign-key-constraints" class="section level2">
-<h2><span class="header-section-number">14.3</span> Foreign Key Constraints</h2>
-<p>All foreign key constraints follow the form <code>table_id references tables</code>, following Ruby style conventions.</p>
-<p>A <a href="https://gist.github.com/dlebauer/12d8d9ed1b2965301d64" target="_blank">Github Gist</a> contains a list of foreign key constraints to be placed on BETYdb. The foreign keys are often named using the form <code>fk_foreigntable_lookuptable_1</code> where the foreigntable has the foreign key.</p>
-</div>
-<div id="non-null-constraints" class="section level2">
-<h2><span class="header-section-number">14.4</span> Non Null Constraints</h2>
-<p>This is a list of fields that should not be allowed to be null. In all cases, the primary key should not be null. For many-to-many relationship tables, the foreign keys should be non-null.</p>
-<ul>
-<li>citations: author, year, title</li>
-<li>covariates: trait_id, variable_id</li>
-<li>cultivars: specie_id, name</li>
-<li>dbfiles: file_name, file_path, container_type, container_id, machine_id</li>
-<li>ensembles: workflow_id</li>
-<li>formats: dataformat</li>
-<li>formats_variables: ?</li>
-<li>inputs: name, access_level, format_id</li>
-<li>likelihoods: run_id, variable_id, input_id</li>
-<li>machines: hostname</li>
-<li>managements: date, management_type</li>
-<li>methods: name, description, citation_id</li>
-<li>models: model_name, model_path, revision, model_type</li>
-<li>pfts: definition, name</li>
-<li>posteriors: pft_id, format_id</li>
-<li>priors: phylogeny, variable_id, distn, parama, paramb</li>
-<li>runs: model_id, site_id, start_time, finish_time, outdir, outprefix, setting, parameter_list, started_at, ensemble_id (note: finished_at will not be available when record is created)</li>
-<li>sites: lat, lon, sitename, greenhouse</li>
-<li>species: genus, species, scientificname</li>
-<li>traits: specie_id, citation_id, treatment_id, mean, variable_id, checked, access_level</li>
-<li>treatments: name, control</li>
-<li>users: login, name, email, crypted_password, salt, access_level, page_access_level, apikey</li>
-<li>variables: namem, units</li>
-<li>workflows: folder, started_at, site_id, model_id, hostname, params, advanced_edit, start_date, end_date</li>
-<li>yields: specie_id, citation_id, treatment_id, mean, variable_id, checked, access_level</li>
-</ul>
-</div>
-<div id="uniqueness-constraints" class="section level2">
-<h2><span class="header-section-number">14.5</span> Uniqueness constraints</h2>
-<p>Uniqueness constraints are “natural keys”, i.e. combinations of fields that should be unique within a table. Ideally, each table would have a natural key, but a table may have 0, 1, or many uniqueness constraints.</p>
-<p>For many-to-many relationship tables, the foreign key pairs should be unique; these should be implemented but are not listed here for brevity.</p>
-<ul>
-<li>citations: author, year, title</li>
-<li>covariates: trait_id, variable_id</li>
-<li>cultivars: specie_id, name</li>
-<li>dbfiles: file_name, file_path, machine_id</li>
-<li>dbfiles: container_type, container_id</li>
-<li>formats_variables: ?</li>
-<li>formats: site_id, start_date, end_date, format_id</li>
-<li>likelihoods: run_id, variable_id, input_id</li>
-<li>machines: hostname</li>
-<li>managements: date, management_type</li>
-<li>methods: name, citation_id</li>
-<li>models: model_path</li>
-<li>pfts: name</li>
-<li>posteriors: pft_id</li>
-<li>priors: phylogeny, variable_id, distn, parama, paramb</li>
-<li>priors: phylogeny, variable_id, notes</li>
-<li>runs: (?) model_id, site_id, start_time, finish_time, parameter_list, ensemble_id</li>
-<li>sites: lat, lon, sitename</li>
-<li>species: scientificname (not genus, species because there may be multiple varieties)</li>
-<li>traits: site_id, specie_id, citation_id, cultivar_id, treatment_id, date, time, variable_id, entity_id, method_id, date_year, date_month, date_day, time_hour, time_minute</li>
-<li>treatments:</li>
-<li>for a given citation, name should be unique;</li>
-<li>for a given citation and site, there should be only one control</li>
-<li>users: (each of the following fields should be independently unique from other records)</li>
-<li>login</li>
-<li>email</li>
-<li>crypted_password</li>
-<li>salt</li>
-<li>apikey</li>
-<li>variables: name</li>
-<li>workflows: site_id, model_id, params, advanced_edit, start_date, end_date</li>
-<li>yields: site_id, specie_id, citation_id, cultivar_id, treatment_id, date, entity_id, method_id, date_year, date_month, date_day</li>
-</ul>
-</div>
-<div id="technical-note" class="section level2">
-<h2><span class="header-section-number">14.6</span> Technical Note</h2>
-<p><strong>Database level constraints violates Ruby’s “Active Record”</strong> approach.</p>
-<p>The <a href="http://guides.rubyonrails.org/migrations.html#active-record-and-referential-integrity" target="_blank">Rail Guide on Database Migrations</a> suggests</p>
-<blockquote>
-<p>The Active Record way claims that intelligence belongs in your models, not in the database. As such, features such as triggers or foreign key constraints, which push some of that intelligence back into the database, are not heavily used.</p>
-</blockquote>
-<p>In order to add database constraints we moved from using <code>db/schema.rb</code> to <code>db/structure.sql</code>, so that the schema is stored in SQL rather than in Ruby.</p>
-<p>Given that the Ruby web application is only one of the ways in which we use the database, it seems reasonable to go with the SQL database-level constraints.</p>
-<p>The <code>db/structure.sql</code> approach is more straightforward, allows the database to exist independently of its Rails framework, and provides more flexibility.</p>
+<div id="volume-3-technical-guide" class="section level1 unnumbered">
+<h1>Volume 3 : Technical Guide</h1>
 
 </div>
+
+
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="complex-joins-in-the-web-interface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modifying-the-betydb-schema.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+<a href="about-betydb-database-description-and-users-guide.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
