@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Entering Meta-Data | Biofuel Ecophysiological Traits and Yields Database</title>
   <meta name="description" content="4 Entering Meta-Data | Biofuel Ecophysiological Traits and Yields Database" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Entering Meta-Data | Biofuel Ecophysiological Traits and Yields Database" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="By: BETYdb Team" />
 
 
-<meta name="date" content="2019-07-12" />
+<meta name="date" content="2019-07-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,66 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 </head>
@@ -218,87 +193,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="entering-meta-data" class="section level1">
 <h1><span class="header-section-number">4</span> Entering Meta-Data</h1>
-<p>Before entering data, it is first necessary to add and select the
-citation that is the source of the data. It is also necessary for each
-data point to be associated with a Site, Treatment, and Species.
-Cultivar information is also required when available, but it is only
-relevant for domesticated species. Fields with an asterisk (*) are
-required.</p>
+<p>Before entering data, it is first necessary to add and select the citation that is the source of the data. It is also necessary for each data point to be associated with a Site, Treatment, and Species. Cultivar information is also required when available, but it is only relevant for domesticated species. Fields with an asterisk (*) are required.</p>
 
 <div id="adding-a-citation" class="section level2">
 <h2><span class="header-section-number">4.1</span> Adding a Citation</h2>
-<p>Citation provides information regarding the source of the data.
-A PDF copy of each paper should be available through Mendeley.</p>
+<p>Citation provides information regarding the source of the data. A PDF copy of each paper should be available through Mendeley.</p>
 <ol style="list-style-type: decimal">
 <li>Select one of the starred papers from your project’s Mendeley folder.</li>
-<li>The data to be entered should be specified in the notes associated
-with the paper in Mendeley</li>
-<li>Identify (highlight or underline) the data (means and statistics)
-that you will enter</li>
+<li>The data to be entered should be specified in the notes associated with the paper in Mendeley</li>
+<li>Identify (highlight or underline) the data (means and statistics) that you will enter</li>
 <li>Enter citation information
 <ul>
-<li><a href="https://www.betydb.org/citations/new" target="_blank">Data entry form</a> for a new
-site: <code>BETYdb</code> → <code>Citations</code> → <code>new</code></li>
+<li><a href="https://www.betydb.org/citations/new" target="_blank">Data entry form</a> for a new site: <code>BETYdb</code> → <code>Citations</code> → <code>new</code></li>
 <li><strong>Author</strong>: Input the first author’s last name only</li>
-<li><strong>Year</strong>: Input the year the paper was published, not submitted, reviewed,
-or anything else</li>
+<li><strong>Year</strong>: Input the year the paper was published, not submitted, reviewed, or anything else</li>
 <li>Fill out Title, Journal, Vol, &amp; Pg. For unknown information, input ‘NA’</li>
-<li><strong>DOI</strong>: The ‘digital object identifier’. If DOI is available, PDF and
-URL are optional. This can be located in the article or in the
-article website. Use Ctrl+F ‘DOI’ to find it. Some older
-articles do not have a DOI.
-When entering the DOI, don’t include a “doi:” prefix; the DOI should start with “10.”.</li>
-<li><strong>URL</strong>: Web address of the article, preferably from publisher’s website. Include the <code>&quot;http://&quot;</code> or <code>&quot;https://&quot;</code> prefix. If no on-line version is available, but some other information about how to obtain the citation is available, you may use a parenthesized note in lieu of a bona fide URL, e.g. “(e-mail Dr. No at <a href="mailto:no@example.com" class="email">no@example.com</a> for a written copy)”.</li>
+<li><strong>DOI</strong>: The ‘digital object identifier’. If DOI is available, PDF and URL are optional. This can be located in the article or in the article website. Use Ctrl+F ‘DOI’ to find it. Some older articles do not have a DOI. When entering the DOI, don’t include a “doi:” prefix; the DOI should start with “10.”.</li>
+<li><strong>URL</strong>: Web address of the article, preferably from publisher’s website. Include the <code>&quot;http://&quot;</code> or <code>&quot;https://&quot;</code> prefix. If no on-line version is available, but some other information about how to obtain the citation is available, you may use a parenthesized note in lieu of a bona fide URL, e.g. “(e-mail Dr. No at <a href="mailto:no@example.com">no@example.com</a> for a written copy)”.</li>
 <li><strong>PDF</strong>: URL of the PDF of the article. Include the <code>&quot;http://&quot;</code> or <code>&quot;https://&quot;</code> prefix. (A parenthesized note is allowed here as well.)</li>
 </ul></li>
 </ol>
-<p><img src="figures/Addnewcitation2/Addnewcitation2.jpg" /></p>
+<div class="figure">
+<img src="figures/Addnewcitation2/Addnewcitation2.jpg" />
+
+</div>
 
 </div>
 <div id="adding-a-site" class="section level2">
 <h2><span class="header-section-number">4.2</span> Adding a Site</h2>
-<p>Each experiment is conducted at a unique site. In the context of BETY,
-the term ‘site’ refers to a specific location and it is common for many
-sites to be located within the same experimental station. By creating
-distinct records for multiple sites, it is possible to differentiate
-among independent studies.</p>
+<p>Each experiment is conducted at a unique site. In the context of BETY, the term ‘site’ refers to a specific location and it is common for many sites to be located within the same experimental station. By creating distinct records for multiple sites, it is possible to differentiate among independent studies.</p>
 <ol style="list-style-type: decimal">
-<li>Before adding a site, search to make sure that site is not already
-entered in the database.</li>
+<li>Before adding a site, search to make sure that site is not already entered in the database.</li>
 <li>Search for the site given latitude and longitude
 <ul>
-<li>If an institution name or city and state are given, try to
-locate the site on Google Maps</li>
-<li>If a site name is given, try to locate the site using a
-combination of Google and Google Maps</li>
-<li>If latitude and longitude are given in the paper, search by lat
-and lon, which will return all sites within <span class="math inline">\(\pm\)</span> 1 degree lat and
-long.</li>
-<li>If an existing site is plausibly the same site as the one
-mentioned in the paper, it will be necessary to check other
-papers linked to the existing site.
+<li>If an institution name or city and state are given, try to locate the site on Google Maps</li>
+<li>If a site name is given, try to locate the site using a combination of Google and Google Maps</li>
+<li>If latitude and longitude are given in the paper, search by lat and lon, which will return all sites within <span class="math inline">\(\pm\)</span> 1 degree lat and long.</li>
+<li>If an existing site is plausibly the same site as the one mentioned in the paper, it will be necessary to check other papers linked to the existing site.
 <ul>
-<li>Use the same site if the previous study uses the <em>exact same
-location</em> and experimental setup.</li>
-<li>Create a new site if the study was conducted in a different
-field (i.e., not the exact same location).</li>
-<li>Create a new site if one study was conducted in a greenhouse
-and another was conducted in a field.</li>
-<li>Do not use distinct sites for seed source in a common garden
-experiment (see <a href="entering-meta-data.html#when-not-to-enter-a-new-site">When not to enter a new site</a> below)</li>
+<li>Use the same site if the previous study uses the <em>exact same location</em> and experimental setup.</li>
+<li>Create a new site if the study was conducted in a different field (i.e., not the exact same location).</li>
+<li>Create a new site if one study was conducted in a greenhouse and another was conducted in a field.</li>
+<li>Do not use distinct sites for seed source in a common garden experiment (see <a href="entering-meta-data.html#when-not-to-enter-a-new-site">When not to enter a new site</a> below)</li>
 </ul></li>
 </ul></li>
-<li>To use an existing site, click <code>Edit</code> for the site, and then select
-current citation under <code>Add Citation Relationships</code></li>
+<li>To use an existing site, click <code>Edit</code> for the site, and then select current citation under <code>Add Citation Relationships</code></li>
 <li>If site does not exist, add a new site.</li>
 </ol>
 <p>Interface for adding a new site:</p>
-<p><img src="figures/Addnewsite1/Addnewsite1.jpg" /></p>
+<div class="figure">
+<img src="figures/Addnewsite1/Addnewsite1.jpg" />
+
+</div>
 <p><strong>Attributes of a site record</strong></p>
-<table>
+<table style="width:78%;">
 <colgroup>
-<col width="53%" />
-<col width="46%" />
+<col width="41%" />
+<col width="36%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -382,16 +333,7 @@ current citation under <code>Add Citation Relationships</code></li>
 <p>Points can be added via the web interface; spatial geometries, e.g. a plot, site, or country boundary, must be entered via the PostgreSQL command line.</p>
 <div id="point-locations" class="section level4">
 <h4><span class="header-section-number">4.2.2.1</span> Point Locations</h4>
-<p>If latitude and longitude coordinates are not available, it is often
-possible to determine the site location based on the site name, city,
-and other information. One way to do this would be to look up a location
-name in <a href="http://maps.google.com" target="_blank">Google Maps</a> and then locate it on the
-embedded map. Google Maps can provide decimal degrees if the LatLng
-feature is enabled, which can be done
-<a href="http://maps.google.com/maps?showlabs=1" target="_blank">here</a>. Google Earth can be
-particularly useful in locating sites, along with their coordinates and
-elevation. Alternatively, the site website or address might be found
-through an internet search (e.g. Google).</p>
+<p>If latitude and longitude coordinates are not available, it is often possible to determine the site location based on the site name, city, and other information. One way to do this would be to look up a location name in <a href="http://maps.google.com" target="_blank">Google Maps</a> and then locate it on the embedded map. Google Maps can provide decimal degrees if the LatLng feature is enabled, which can be done <a href="http://maps.google.com/maps?showlabs=1" target="_blank">here</a>. Google Earth can be particularly useful in locating sites, along with their coordinates and elevation. Alternatively, the site website or address might be found through an internet search (e.g. Google).</p>
 <p>Use the table below to determine the number of significant digits to indicate the level of precision with which a study location is known.</p>
 <table>
 <caption>Level of accuracy to record in lat and lon fields.</caption>
@@ -453,9 +395,9 @@ writeLines(
 <div id="references" class="section level4">
 <h4><span class="header-section-number">4.2.2.3</span> References</h4>
 <ul>
-<li>PostGIS <code>ST_GeomFromText</code> documentation: <a href="http://www.postgis.org/docs/ST_GeomFromText.html" target="_blank">http://www.postgis.org/docs/ST_GeomFromText.html</a></li>
-<li>gis.stackexchange: <a href="http://gis.stackexchange.com/q/111212/1239" target="_blank">http://gis.stackexchange.com/q/111212/1239</a></li>
-<li>Github issues: <a href="https://github.com/PecanProject/pecan/issues/570" target="_blank">https://github.com/PecanProject/pecan/issues/570</a></li>
+<li>PostGIS <code>ST_GeomFromText</code> documentation: <a href="http://www.postgis.org/docs/ST_GeomFromText.html" class="uri" target="_blank">http://www.postgis.org/docs/ST_GeomFromText.html</a></li>
+<li>gis.stackexchange: <a href="http://gis.stackexchange.com/q/111212/1239" class="uri" target="_blank">http://gis.stackexchange.com/q/111212/1239</a></li>
+<li>Github issues: <a href="https://github.com/PecanProject/pecan/issues/570" class="uri" target="_blank">https://github.com/PecanProject/pecan/issues/570</a></li>
 </ul>
 
 </div>
@@ -465,69 +407,43 @@ writeLines(
 <h2><span class="header-section-number">4.3</span> Adding Treatments and Managements</h2>
 <div id="adding-a-treatment" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Adding a Treatment</h3>
-<p>Treatments provide a description of a study’s
-treatments. Any specific information such as rate of fertilizer
-application should be recorded in the managements table. In
-general, managements are recorded when Yield data is collected, but not
-when only Trait data is collected.</p>
+<p>Treatments provide a description of a study’s treatments. Any specific information such as rate of fertilizer application should be recorded in the managements table. In general, managements are recorded when Yield data is collected, but not when only Trait data is collected.</p>
 <p><strong>When not to use treatment</strong>: predictor variables that are not based on distinct managements, or that are distinguished by information already contained in the trait (e.g. site, cultivar, date fields) should not be given distinct treatments. For example, a study that compares two different species, cultivars or genotypes can be assigned the same control treatment; these categories will be distinguished by the species or cultivar field. Another example is when the observation is made at two sites: the site field will include this information.</p>
 <ul>
-<li><p>A treatment name is used as a categorical (rather than continuous)
-variable: it should be easy to find the treatment in the paper based on
-the name in the database. The treatment name does not have to indicate
-the level of treatment used in a particular treatment - this information
-will be included in the management table.</p></li>
-<li><p>It is essential that a control group is identified with each study. If
-there is no experimental manipulation, then there is only one treatment. In
-this case, the treatment should be named ‘observational’ and listed as
-control. To determine the control when it is not explicitly stated, first
-determine if one of the treatments is most like a background condition
-or how a system would be in its non-experimental state. In the case of
-crops, this could be how a farmer would be most likely to treat a crop.</p>
-<p><strong>Name</strong>: indicates type of treatment; it should be easy for anyone with the
-original paper to be able to identify the treatment from its name.<br />
-<strong>Control</strong>: make sure to indicate if the treatment is the study ‘control’ by
-selecting true or false<br />
-<strong>Definition</strong>: indicates the specifics of the treatment. It is useful for
-identification purposes to use a quantified description of the
-treatment even though this information can only be used for analysis
-when entered as a management.</p></li>
+<li><p>A treatment name is used as a categorical (rather than continuous) variable: it should be easy to find the treatment in the paper based on the name in the database. The treatment name does not have to indicate the level of treatment used in a particular treatment - this information will be included in the management table.</p></li>
+<li><p>It is essential that a control group is identified with each study. If there is no experimental manipulation, then there is only one treatment. In this case, the treatment should be named ‘observational’ and listed as control. To determine the control when it is not explicitly stated, first determine if one of the treatments is most like a background condition or how a system would be in its non-experimental state. In the case of crops, this could be how a farmer would be most likely to treat a crop.</p></li>
 </ul>
-<p><img src="figures/Addnewtreatment/Addnewtreatment.jpg" /></p>
+<p><strong>Name</strong>: indicates type of treatment; it should be easy for anyone with the original paper to be able to identify the treatment from its name.<br />
+<strong>Control</strong>: make sure to indicate if the treatment is the study ‘control’ by selecting true or false<br />
+<strong>Definition</strong>: indicates the specifics of the treatment. It is useful for identification purposes to use a quantified description of the treatment even though this information can only be used for analysis when entered as a management.</p>
+<div class="figure">
+<img src="figures/Addnewtreatment/Addnewtreatment.jpg" />
+
+</div>
 
 </div>
 <div id="adding-managements" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Adding Managements</h3>
 <p>There are two ways to add management information, through the web interface or from a spreadsheet. These are discussed in turn, below. Recall that managements can be associated with one or more treatments.</p>
-<p>Managements refers to something that occurs at a specific time and has a quantity.
-Managements include actions that are done to a plant or ecosystem, such as the planting density or rate of fertilization, for example.
-Managements are distinct from treatments in that a treatment is used to categorically identify an experimental treatment, whereas a management is used to describe what has been done.
-Managements are the way a treatment becomes quantified. Each treatment is often associated with multiple managements.
-The combination of managements associated with a particular treatment will distinguish it from other treatments.
-The management types that can be entered into BETY are described in the table below.
-Each management may be associated with one or more treatments.
-For example, in a fertilization experiment, planting, irrigation, and herbicide managements would be applied to all plots but the fertilization will be specific to a treatment.
-For a multi-year experiment, there may be multiple entries for the same type of management, reflecting, for example, repeated applications of herbicide or fertilizer.</p>
+<p>Managements refers to something that occurs at a specific time and has a quantity. Managements include actions that are done to a plant or ecosystem, such as the planting density or rate of fertilization, for example. Managements are distinct from treatments in that a treatment is used to categorically identify an experimental treatment, whereas a management is used to describe what has been done. Managements are the way a treatment becomes quantified. Each treatment is often associated with multiple managements. The combination of managements associated with a particular treatment will distinguish it from other treatments. The management types that can be entered into BETY are described in the table below. Each management may be associated with one or more treatments. For example, in a fertilization experiment, planting, irrigation, and herbicide managements would be applied to all plots but the fertilization will be specific to a treatment. For a multi-year experiment, there may be multiple entries for the same type of management, reflecting, for example, repeated applications of herbicide or fertilizer.</p>
 <p><strong><em>Note:</em></strong> Managements are not always required and the level of detail depends on the scope of research. By default managements are recorded for Yields but not for Traits, unless specifically required by the data or project manager.</p>
 <ul>
 <li><strong>Date</strong>: In format <code>YYYY-MM-DD</code> or <code>YYYY-MM-DD HH:MM</code>.</li>
 <li><strong>Dateloc</strong>: Date level of confidence, explained in Section <a href="adding-trait-and-yield-data.html#dateloc">DateLOC</a> and the accompanying table.</li>
-<li><strong>Mgmttype</strong>: The name of the management being used. A list of standardized
-management types can be found in the table below.</li>
+<li><strong>Mgmttype</strong>: The name of the management being used. A list of standardized management types can be found in the table below.</li>
 <li><strong>Level</strong>: A quantification of mgmttype.</li>
-<li><strong>Units</strong>: Refers to the units of the level. Units should be converted to those
-in following table.</li>
+<li><strong>Units</strong>: Refers to the units of the level. Units should be converted to those in following table.</li>
 </ul>
 <div id="types-of-managements" class="section level4">
 <h4><span class="header-section-number">4.3.2.1</span> Types of Managements</h4>
 <p>The following table shows a list of managements to enter. It is more important to have management records for yields than for traits. For greenhouse experiments, it is not necessary to include informaton on fertilizaton, lighting, or greenhouse temperature.</p>
-<table>
+<table style="width:96%;">
 <caption>Management Types</caption>
 <colgroup>
-<col width="26%" />
-<col width="10%" />
-<col width="24%" />
-<col width="38%" />
+<col width="25%" />
+<col width="11%" />
+<col width="23%" />
+<col width="36%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -541,7 +457,6 @@ in following table.</li>
 <tr class="odd">
 <td align="left">Burned</td>
 <td align="left">aboveground biomass burned</td>
-<td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -627,9 +542,11 @@ in following table.</li>
 </div>
 <div id="via-web-interface" class="section level4">
 <h4><span class="header-section-number">4.3.2.2</span> Via Web interface</h4>
-<p>Managements can be entered via the web interface. First enter the management, and then associate it with one or more treatments. To associate a management with multiple treatments, first create the
-management, then edit the management and add treatment relationships.</p>
-<p><img src="figures/Addnewmanagement/Addnewmanagement.jpg" /></p>
+<p>Managements can be entered via the web interface. First enter the management, and then associate it with one or more treatments. To associate a management with multiple treatments, first create the management, then edit the management and add treatment relationships.</p>
+<div class="figure">
+<img src="figures/Addnewmanagement/Addnewmanagement.jpg" />
+
+</div>
 </div>
 <div id="preparing-a-managements-spreadsheet-for-upload" class="section level4">
 <h4><span class="header-section-number">4.3.2.3</span> Preparing a managements spreadsheet for Upload</h4>
@@ -643,8 +560,7 @@ citation_title
 citation_year
 treatment_name
 mgmttype</code></pre>
-<p>These columns map to fields in the database (in the citations, treatments, and managements field).
-Each row must have non-empty values in each of these columns. Moreover, the citation columns must match exactly one row in the citations row of the database and the treatment name must match exactly one of the treatment rows associated with the matched citation.</p>
+<p>These columns map to fields in the database (in the citations, treatments, and managements field). Each row must have non-empty values in each of these columns. Moreover, the citation columns must match exactly one row in the citations row of the database and the treatment name must match exactly one of the treatment rows associated with the matched citation.</p>
 <p><strong>Optional Fields</strong> The table <em>may</em> also contain the following column headings:</p>
 <pre><code>date
 dateloc
@@ -679,62 +595,43 @@ where [options] are:
 <div id="using-the-script-to-update-the-production-database" class="section level5 unnumbered">
 <h5>Using the Script to Update the Production Database</h5>
 <p>There are three options for using this script to update the production database.</p>
-<p><strong>Option A</strong>: Run the script on the production server in the
-Rails root directory of the production deployment of the BETYdb Rails app.</p>
+<p><strong>Option A</strong>: Run the script on the production server in the Rails root directory of the production deployment of the BETYdb Rails app.</p>
 <ol style="list-style-type: decimal">
 <li><p>Upload the input CSV file to the production machine.</p></li>
-<li><p>Log in to the production machine and cd to the root directory of production
-deployment of the BETYdb Rails app.</p></li>
-<li><p>Run the script using the ‘–environment=production’ option and with
-‘–login’
-set to your own BETYdb Rails login for the production deployment. The
-command-line argument specifying the input CSV file path should match the
-location you uploaded it to.</p></li>
-<li><p>After examining the resulting output file, apply it to the database with the
-command</p>
-<pre><code> psql &lt;production database name&gt;  &lt;  &lt;output file name&gt;</code></pre></li>
+<li><p>Log in to the production machine and cd to the root directory of production deployment of the BETYdb Rails app.</p></li>
+<li><p>Run the script using the ‘–environment=production’ option and with ‘–login’ set to your own BETYdb Rails login for the production deployment. The command-line argument specifying the input CSV file path should match the location you uploaded it to.</p></li>
+<li><p>After examining the resulting output file, apply it to the database with the command</p>
+<pre><code>psql &lt;production database name&gt;  &lt;  &lt;output file name&gt;</code></pre></li>
 </ol>
-<p>(If your machine login doesn’t match a PostgreSQL user name that has insert
-permissions on the production database, you will have to use the ‘-U’ option to
-specify a user who does have such permission.)</p>
+<p>(If your machine login doesn’t match a PostgreSQL user name that has insert permissions on the production database, you will have to use the ‘-U’ option to specify a user who does have such permission.)</p>
 <p><strong>Option B</strong>: Run the script on your local machine using an up-to-date copy of the BETYdb database.</p>
 <p>To do this:</p>
 <ol style="list-style-type: decimal">
 <li><p>Switch to the root of the copy of the BETYdb Rails app you want to use.</p></li>
-<li><p>For the copy of the BETYdb database connected to this copy of the Rails app,
-ensure that at least the citations and the treatments tables are up-to-date
-with the production copy of the BETYdb database. (If you have different
-databases specified for your development and your production environments,
-be
-sure that the environment you specify with the ‘–environment’ option points
-to the right database.)</p></li>
+<li><p>For the copy of the BETYdb database connected to this copy of the Rails app, ensure that at least the citations and the treatments tables are up-to-date with the production copy of the BETYdb database. (If you have different databases specified for your development and your production environments, be sure that the environment you specify with the ‘–environment’ option points to the right database.)</p></li>
 <li><p>Run this script.</p></li>
-<li><p>Upload the output file to the production server and apply it to the
-production database using the psql command given above.</p></li>
+<li><p>Upload the output file to the production server and apply it to the production database using the psql command given above.</p></li>
 </ol>
 <p><strong>Option C</strong>: Run the script on your local machine using a Rails environment connected to the production database.</p>
 <ol style="list-style-type: decimal">
 <li>Go to the copy of the BETYdb Rail app on your local machine that you wish to use.</li>
-<li>Edit the file config/database.yml, adding the following section:</li>
-</ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">ebi:</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">  <span class="fu">adapter:</span><span class="at"> postgis</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">  <span class="fu">encoding:</span><span class="at"> utf8</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">  <span class="fu">reconnect:</span><span class="at"> false</span></a>
-<a class="sourceLine" id="cb8-5" data-line-number="5">  <span class="fu">database:</span><span class="at"> &lt;production database name&gt;</span></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6">  <span class="fu">pool:</span><span class="at"> 5</span></a>
-<a class="sourceLine" id="cb8-7" data-line-number="7">  <span class="fu">username:</span><span class="at"> &lt;user name for connecting to the production database&gt;</span></a>
-<a class="sourceLine" id="cb8-8" data-line-number="8">  <span class="fu">password:</span><span class="at"> &lt;password for the user specified above&gt;</span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9">  <span class="fu">port:</span><span class="at"> 8000</span></a>
-<a class="sourceLine" id="cb8-10" data-line-number="10">  <span class="fu">host:</span><span class="at"> localhost</span></a></code></pre></div>
-<p>Most of these values can be copied from the production copy <code>config/database.yml</code> if you have access to it. The port and host entries are ‘new’.
-3. Set up an ssh tunnel to the production server using the command</p>
-<pre><code>    ssh -L 8000:&lt;production server address&gt;:5432 &lt;production server address&gt;</code></pre>
-<p>This will log you into the production server, but at the same time it will connect port 8000 on your local machine with port 5432 (the PostgreSQL server port) on the production machine. (The choice of 8000 for port number is somewhat arbitrary, but whatever value you use should match the value you specified for the port number in the database.yml file.)</p>
-<ol start="4" style="list-style-type: decimal">
+<li><p>Edit the file config/database.yml, adding the following section:</p>
+<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">ebi:</span>
+  <span class="fu">adapter:</span><span class="at"> postgis</span>
+  <span class="fu">encoding:</span><span class="at"> utf8</span>
+  <span class="fu">reconnect:</span><span class="at"> false</span>
+  <span class="fu">database:</span><span class="at"> &lt;production database name&gt;</span>
+  <span class="fu">pool:</span><span class="at"> 5</span>
+  <span class="fu">username:</span><span class="at"> &lt;user name for connecting to the production database&gt;</span>
+  <span class="fu">password:</span><span class="at"> &lt;password for the user specified above&gt;</span>
+  <span class="fu">port:</span><span class="at"> 8000</span>
+  <span class="fu">host:</span><span class="at"> localhost</span></code></pre></div>
+Most of these values can be copied from the production copy <code>config/database.yml</code> if you have access to it. The port and host entries are ‘new’.</li>
+<li><p>Set up an ssh tunnel to the production server using the command</p>
+<pre><code>ssh -L 8000:&lt;production server address&gt;:5432 &lt;production server address&gt;</code></pre>
+<p>This will log you into the production server, but at the same time it will connect port 8000 on your local machine with port 5432 (the PostgreSQL server port) on the production machine. (The choice of 8000 for port number is somewhat arbitrary, but whatever value you use should match the value you specified for the port number in the database.yml file.)</p></li>
 <li>Run this script with the environment option ‘–environment=ebi’. (Again, the name ‘ebi’ for the environment is somewhat arbitrary, but the option value should match the name in your database.yml file.)</li>
-<li>Continue as in step 4 under option B.
- </li>
+<li><p>Continue as in step 4 under option B.  </p></li>
 </ol>
 
 </div>
@@ -743,23 +640,14 @@ production database using the psql command given above.</p></li>
 </div>
 <div id="adding-a-pft-species-or-cultivar" class="section level2">
 <h2><span class="header-section-number">4.4</span> Adding a PFT, Species, or Cultivar</h2>
-<p>Plant functional types (PFTs) are used to group plants for statistical
-modeling and analysis. PFTs are associated with both a specific set of
-priors, and a subset species for which the traits and yields data
-will be queried. In many cases, it is appropriate to use default PFTs
-(e.g. <code>tempdecid</code> is temperate deciduous trees)</p>
-<p>In other cases, it is necessary to define PFTs for a specific project.
-For example, to query a specific set of priors or a subset of a species, a
-new PFT may be defined. For example, Xiaohui Feng defined PFTs for the
-species found at the EBI Farm prairie. Such project-specific PFTs can
-be defined as <code>`projectname`.`pft`</code> (i.e. <code>ebifarm.c4grass</code> instead
-of <code>c4grass</code>).</p>
-<p>Species that are found or cultivated in the United States should be in
-the Plants table. Look it up there first.</p>
-<p>To add a new Cultivar, go to the <a href="https://www.betydb.org/cultivars/new" target="_blank">new
-cultivar</a> page: <code>Cultivar</code>
-→ <code>new</code>.</p>
-<p><img src="figures/Addnewcultivar/Addnewcultivar.jpg" /></p>
+<p>Plant functional types (PFTs) are used to group plants for statistical modeling and analysis. PFTs are associated with both a specific set of priors, and a subset species for which the traits and yields data will be queried. In many cases, it is appropriate to use default PFTs (e.g. <code>tempdecid</code> is temperate deciduous trees)</p>
+<p>In other cases, it is necessary to define PFTs for a specific project. For example, to query a specific set of priors or a subset of a species, a new PFT may be defined. For example, Xiaohui Feng defined PFTs for the species found at the EBI Farm prairie. Such project-specific PFTs can be defined as <code>`projectname`.`pft`</code> (i.e. <code>ebifarm.c4grass</code> instead of <code>c4grass</code>).</p>
+<p>Species that are found or cultivated in the United States should be in the Plants table. Look it up there first.</p>
+<p>To add a new Cultivar, go to the <a href="https://www.betydb.org/cultivars/new" target="_blank">new cultivar</a> page: <code>Cultivar</code> → <code>new</code>.</p>
+<div class="figure">
+<img src="figures/Addnewcultivar/Addnewcultivar.jpg" />
+
+</div>
 
 </div>
 </div>
@@ -819,7 +707,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
