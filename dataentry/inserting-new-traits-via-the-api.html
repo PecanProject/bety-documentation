@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Inserting New Traits Via the API | Biofuel Ecophysiological Traits and Yields Database</title>
   <meta name="description" content="6 Inserting New Traits Via the API | Biofuel Ecophysiological Traits and Yields Database" />
-  <meta name="generator" content="bookdown 0.13.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Inserting New Traits Via the API | Biofuel Ecophysiological Traits and Yields Database" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="By: BETYdb Team" />
 
 
-<meta name="date" content="2019-09-20" />
+<meta name="date" content="2020-07-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,16 +121,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="entering-meta-data.html"><a href="entering-meta-data.html"><i class="fa fa-check"></i><b>4</b> Entering Meta-Data</a><ul>
-<li class="chapter" data-level="4.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-citation"><i class="fa fa-check"></i><b>4.1</b> Adding a Citation</a></li>
-<li class="chapter" data-level="4.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-site"><i class="fa fa-check"></i><b>4.2</b> Adding a Site</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#when-not-to-enter-a-new-site"><i class="fa fa-check"></i><b>4.2.1</b> When not to enter a new site</a></li>
-<li class="chapter" data-level="4.2.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#site-location"><i class="fa fa-check"></i><b>4.2.2</b> Site Location</a></li>
+<li class="chapter" data-level="4.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#betydb-web-interface"><i class="fa fa-check"></i><b>4.1</b> BETYdb web interface</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-citation"><i class="fa fa-check"></i><b>4.1.1</b> Adding a Citation</a></li>
+<li class="chapter" data-level="4.1.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-site"><i class="fa fa-check"></i><b>4.1.2</b> Adding a Site</a></li>
+<li class="chapter" data-level="4.1.3" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-treatments-and-managements"><i class="fa fa-check"></i><b>4.1.3</b> Adding Treatments and Managements</a></li>
+<li class="chapter" data-level="4.1.4" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-pft-species-or-cultivar"><i class="fa fa-check"></i><b>4.1.4</b> Adding a PFT, Species, or Cultivar</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-treatments-and-managements"><i class="fa fa-check"></i><b>4.3</b> Adding Treatments and Managements</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-treatment"><i class="fa fa-check"></i><b>4.3.1</b> Adding a Treatment</a></li>
-<li class="chapter" data-level="4.3.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-managements"><i class="fa fa-check"></i><b>4.3.2</b> Adding Managements</a></li>
+<li class="chapter" data-level="4.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#betydb-yaba-and-python-client-library"><i class="fa fa-check"></i><b>4.2</b> BETYdb-YABA and Python Client Library</a></li>
+<li class="chapter" data-level="4.3" data-path="entering-meta-data.html"><a href="entering-meta-data.html#sql"><i class="fa fa-check"></i><b>4.3</b> SQL</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="entering-meta-data.html"><a href="entering-meta-data.html#metadata-entry-workflow-for-betydb"><i class="fa fa-check"></i><b>4.3.1</b> Metadata Entry Workflow for BETYdb</a></li>
+<li class="chapter" data-level="4.3.2" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-1-add-new-experiments"><i class="fa fa-check"></i><b>4.3.2</b> Step 1: Add new experiments</a></li>
+<li class="chapter" data-level="4.3.3" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-2-add-new-sites"><i class="fa fa-check"></i><b>4.3.3</b> Step 2: Add new sites</a></li>
+<li class="chapter" data-level="4.3.4" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-3-add-new-treatments"><i class="fa fa-check"></i><b>4.3.4</b> Step 3: Add new treatments</a></li>
+<li class="chapter" data-level="4.3.5" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-4-add-new-cultivars"><i class="fa fa-check"></i><b>4.3.5</b> Step 4: Add new cultivars</a></li>
+<li class="chapter" data-level="4.3.6" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-5-add-new-citations"><i class="fa fa-check"></i><b>4.3.6</b> Step 5: Add new citations</a></li>
+<li class="chapter" data-level="4.3.7" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-6-associate-experiments-with-sites"><i class="fa fa-check"></i><b>4.3.7</b> Step 6: Associate experiments with sites</a></li>
+<li class="chapter" data-level="4.3.8" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-7-associate-experiments-with-treatments"><i class="fa fa-check"></i><b>4.3.8</b> Step 7: Associate experiments with treatments</a></li>
+<li class="chapter" data-level="4.3.9" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-8-associate-sites-with-cultivars"><i class="fa fa-check"></i><b>4.3.9</b> Step 8: Associate sites with cultivars</a></li>
+<li class="chapter" data-level="4.3.10" data-path="entering-meta-data.html"><a href="entering-meta-data.html#step-9-associate-sites-with-citations"><i class="fa fa-check"></i><b>4.3.10</b> Step 9: Associate sites with citations</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="entering-meta-data.html"><a href="entering-meta-data.html#adding-a-pft-species-or-cultivar"><i class="fa fa-check"></i><b>4.4</b> Adding a PFT, Species, or Cultivar</a></li>
+<li class="chapter" data-level="4.4" data-path="entering-meta-data.html"><a href="entering-meta-data.html#removing-duplicate-records"><i class="fa fa-check"></i><b>4.4</b> Removing duplicate records</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="adding-trait-and-yield-data.html"><a href="adding-trait-and-yield-data.html"><i class="fa fa-check"></i><b>5</b> Adding Trait and Yield Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="adding-trait-and-yield-data.html"><a href="adding-trait-and-yield-data.html#the-new-trait-and-new-yield-pages"><i class="fa fa-check"></i><b>5.1</b> The New Trait and New Yield Pages</a><ul>
@@ -214,11 +224,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li><p>The root level elements is named <code>trait-data-set</code>.</p></li>
 <li><p><code>trait</code> elements appear below the root, either directly, or nested within intervening <code>trait-group</code> elements.</p></li>
-<li><p>A <code>trait</code> element must include a <code>mean</code> attribute with a value of type double. An exponent may be used; for example, in place of “0.0123” one may write “1.23E-2”.</p></li>
+<li><p>A <code>trait</code> element must include a <code>mean</code> attribute with a value of type double. An exponent may be used; for example, in place of &quot;0.0123&quot; one may write &quot;1.23E-2&quot;.</p></li>
 <li><p>A <code>trait</code> element <em>may</em> have the following attributes:</p>
 <ul>
-<li><p>An attribute <code>utc_datetime</code> whose value has the form “YYYY-MM-DDZ” or “YYYY-MM-DDTHH:MM:SSZ” which represents the date or date and time the trait measurement was taken. The trailing “Z” emphasizes that the value is in UTC time and is required. If a time of day is given, the symbol “T” must separate the time from the date. If a time is given, fractional seconds may be included.</p></li>
-<li><p>A <code>local_datetime</code> attribute may be used in place of <code>utc_datetime</code>. This represents the date or date and time of a trait measurement in local time. This attribute may only be used if the trait is associated with a site having a specified time zone. The value format is the same as for <code>utc_datetime</code> except there is no trailing “Z”.</p></li>
+<li><p>An attribute <code>utc_datetime</code> whose value has the form &quot;YYYY-MM-DDZ&quot; or &quot;YYYY-MM-DDTHH:MM:SSZ&quot; which represents the date or date and time the trait measurement was taken. The trailing &quot;Z&quot; emphasizes that the value is in UTC time and is required. If a time of day is given, the symbol &quot;T&quot; must separate the time from the date. If a time is given, fractional seconds may be included.</p></li>
+<li><p>A <code>local_datetime</code> attribute may be used in place of <code>utc_datetime</code>. This represents the date or date and time of a trait measurement in local time. This attribute may only be used if the trait is associated with a site having a specified time zone. The value format is the same as for <code>utc_datetime</code> except there is no trailing &quot;Z&quot;.</p></li>
 <li><p>An attribute <code>access_level</code> <em>must</em> be supplied unless it is supplied using the defaulting mechanism (see below).</p></li>
 </ul></li>
 <li><p>A <code>trait</code> element <em>may</em> have the following child elements:</p>
@@ -228,7 +238,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>If a particular cultivar of the species is intended, a child <code>cultivar</code> element should be included. This element may use either a <code>name</code> attribute (preferred) or an <code>id</code> attribute to identify the cultivar. <em>Cultivar names are guaranteed to be unique within a given species.</em></p></li>
 <li><p><code>citation</code>: Allowed attributes: <code>id</code>, <code>author</code>, <code>year</code>, <code>title</code>, <code>doi</code>. The preferred method of selecting a citation is by doi or by author, year, and title (often just author and year will suffice).</p></li>
 <li><p><code>treatment</code>: Allowed attributes: <code>id</code>, <code>name</code>, <code>control</code>. The preferred method of selecting a method is by name. [In the process of implementation: A citation is <em>required</em>, either directly on the trait or as a default for a group of traits, if a treatment is to be specified. Moreover, the specified treatment must be associated with the specified citation. This will often make it possible to use the <code>name</code> attribute to specify a treatment, since only treatments associated with the given citation will be considered when selecting by name.]</p></li>
-<li><p><code>variable</code>: This specifies what the trait measure. This element must be included if it is not specified in a <code>defaults</code> element (see below). Allowed attributes: <code>id</code>, <code>name</code>, <code>description</code>. <code>name</code> is the preferred attribute to use to specify the variable and <em>should</em> be unique, but this isn’t yet enforced and there are a few cases of duplicates.</p></li>
+<li><p><code>variable</code>: This specifies what the trait measure. This element must be included if it is not specified in a <code>defaults</code> element (see below). Allowed attributes: <code>id</code>, <code>name</code>, <code>description</code>. <code>name</code> is the preferred attribute to use to specify the variable and <em>should</em> be unique, but this isn't yet enforced and there are a few cases of duplicates.</p></li>
 <li><p><code>method</code>: Allowed attributes: <code>name</code>. This element <em>must</em> have a citation child element. (This citation has no ostensive relation to the citation associated with the trait.) Together, the name and the citation should uniquely determine which method is being used. [To do: Constrain the <code>methods</code> table to ensure that this is always possible.]</p></li>
 <li><p><code>covariates</code>: This element specifies what covariates are associated with a trait measurement. It allows no attributes but must contain one or more <code>covariate</code> child elements. Each <code>covariate</code> element must contain a <code>variable</code> element (specifying what the covariate measures) and have a <code>level</code> attribute (specifying the value of that measurement).</p></li>
 <li><p><code>entity</code>: Allowed attributes: <code>name</code> and <code>notes</code>. An entity with the given value for <code>name</code> and <code>notes</code> will be created if no entity with the given name exists. [To be implemented: It is an error to specify an entity at the trait level having a blank name. It is an error to supply a <code>notes</code> attribute if <code>name</code> refers to an existing entity.] [To do: Guarantee uniqueness of non-blank names in the entities table.]</p></li>
@@ -238,7 +248,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p><code>stat</code>: If a trait describes a group of of measurements (as opposed to a single measurement), a <code>stat</code> element may be included. It <em>must</em> have the following three attributes:</p>
 <ul>
 <li><p><code>sample_size</code>, a positive integer.</p></li>
-<li><p><code>name</code>, the name of the statistic measured. Possible values are “SD”, “SE”, “MSE” “95%Cl”, “LSD”, and “MSD”.</p></li>
+<li><p><code>name</code>, the name of the statistic measured. Possible values are &quot;SD&quot;, &quot;SE&quot;, &quot;MSE&quot; &quot;95%Cl&quot;, &quot;LSD&quot;, and &quot;MSD&quot;.</p></li>
 <li><p><code>value</code>, a double giving the value of the named statistic.</p></li>
 </ul></li>
 <li><p><code>notes</code>: This is an element having no attributes but containing free-form textual content.</p></li>
@@ -276,18 +286,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: decimal">
 <li><p>The date of a trait measurement must be given in a column with one of the following headings.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>If the heading “utc_datetime” is used, the supplied values must conform to one of the following formats: <code>1918-11-11T10:00:00Z</code> or <code>1918-11-11Z</code>. In particular, the time must be given in UTC time (hence the “Z”), and if the time is specified (first format), the letter “T” must separate the date and the time portions. If the time is specified, seconds must be included; optionally, fractional seconds may be included as well. The resulting <code>dateloc</code> value will always be <code>5</code> (exact date); the <code>timeloc</code> value will be <code>1</code> (time to the second) if a time is given and <code>9</code> (no data) otherwise.</p></li>
-<li><p>If the heading “local_datetime” is used, the supplied values must conform to one of the following formats: <code>1918-11-11T11:00:00</code> or <code>1918-11-11</code>. In particular, if the time is specified (first format), the letter “T” must separate the date and the time portions. If the time is specified, seconds must be included; optionally, fractional seconds may be included as well. The resulting <code>dateloc</code> value will always be <code>5</code> (exact date); the <code>timeloc</code> value will be <code>1</code> (time to the second) if a time is given and <code>9</code> (no data) otherwise.</p>
-<p>When “local_datetime” is used to specify the date-time value of a trait measurement, the date and time are assumed to be local (site) time if a site is given and if that site has a time zone value stored. Otherwise, the value given is assumed to be UTC time. (The date-time value is always stored in the database as UTC time. This paragraph has to do with how the supplied date-time value is interpreted when read.)</p></li>
+<li><p>If the heading &quot;utc_datetime&quot; is used, the supplied values must conform to one of the following formats: <code>1918-11-11T10:00:00Z</code> or <code>1918-11-11Z</code>. In particular, the time must be given in UTC time (hence the &quot;Z&quot;), and if the time is specified (first format), the letter &quot;T&quot; must separate the date and the time portions. If the time is specified, seconds must be included; optionally, fractional seconds may be included as well. The resulting <code>dateloc</code> value will always be <code>5</code> (exact date); the <code>timeloc</code> value will be <code>1</code> (time to the second) if a time is given and <code>9</code> (no data) otherwise.</p></li>
+<li><p>If the heading &quot;local_datetime&quot; is used, the supplied values must conform to one of the following formats: <code>1918-11-11T11:00:00</code> or <code>1918-11-11</code>. In particular, if the time is specified (first format), the letter &quot;T&quot; must separate the date and the time portions. If the time is specified, seconds must be included; optionally, fractional seconds may be included as well. The resulting <code>dateloc</code> value will always be <code>5</code> (exact date); the <code>timeloc</code> value will be <code>1</code> (time to the second) if a time is given and <code>9</code> (no data) otherwise.</p>
+<p>When &quot;local_datetime&quot; is used to specify the date-time value of a trait measurement, the date and time are assumed to be local (site) time if a site is given and if that site has a time zone value stored. Otherwise, the value given is assumed to be UTC time. (The date-time value is always stored in the database as UTC time. This paragraph has to do with how the supplied date-time value is interpreted when read.)</p></li>
 </ol>
 <p>Note that only one or the other of these columns may occur in the CSV file. Otherwise an error results.</p></li>
 <li><p>Meta-data can not be specified interactively. Thus any associated citation, site, species, cultivar, or treatment must be specified in each row of the CSV file. (This may later change so that repeated metadata specification may be avoided.)</p></li>
-<li><p>Unlike the bulk upload case, matching of metadata entries <em>is</em> case sensitive. Thus, if the CSV file specifies the species as “Sorghum Bicolor” but the database entry for the species specifies the scientificname as “Sorghum bicolor”, the upload will not be successful.</p></li>
+<li><p>Unlike the bulk upload case, matching of metadata entries <em>is</em> case sensitive. Thus, if the CSV file specifies the species as &quot;Sorghum Bicolor&quot; but the database entry for the species specifies the scientificname as &quot;Sorghum bicolor&quot;, the upload will not be successful.</p></li>
 <li><p>Unlike the bulk upload case, it is not necessary to specify an associated citation, site, species, or treatment. The sample file <code>SIMPLE_CSV_TEST_DATA</code> demonstrates the case where a trait value having no associated metadata is inserted.</p></li>
 <li><p>It <em>is</em> required, however, to specify an access level for each trait; therefore, the CSV file <em>must</em> have a column named <code>access_level</code>.</p></li>
-<li><p>When specifying the citation in a CSV file for use with the Bulk Upload wizard, it is necessary to have either a <code>citation_doi</code> column, or have all three of the columns <code>citation_author</code>, <code>citation_year</code>, and <code>citation_title</code>. When using the API, however, any combination of these may be used so long as the values specified in each row determine a unique citation. For example, if there is only one citation with author “Doe”, and if that is the value that occurs in the <code>citation_author</code> column of every row of the table, then it is unnecessary to have a <code>citation_year</code> or <code>citation_title</code> column.</p></li>
+<li><p>When specifying the citation in a CSV file for use with the Bulk Upload wizard, it is necessary to have either a <code>citation_doi</code> column, or have all three of the columns <code>citation_author</code>, <code>citation_year</code>, and <code>citation_title</code>. When using the API, however, any combination of these may be used so long as the values specified in each row determine a unique citation. For example, if there is only one citation with author &quot;Doe&quot;, and if that is the value that occurs in the <code>citation_author</code> column of every row of the table, then it is unnecessary to have a <code>citation_year</code> or <code>citation_title</code> column.</p></li>
 <li><p>Just as for bulk uploads, the <code>trait_covariate_associations</code> table is consulted to determine which column names correspond to trait variables and which ones correspond to covariate variables, and further, which covariates correspond to which traits. <strong>But failing to specify a required covariate for one or more traits will not result in an error.</strong> (Thus, in essence, <em>required</em> covariates are treated just like <em>optional</em> covariates; they will be associated if present, but no complaint will be made if they are not.)</p></li>
-<li><p>No rounding is done of floating point values except to the extent required to fit within PostgreSQL’s 8-byte float type. (Note that all floating point values <em>may</em> be specifed with an exponent; for example 3.20E-2 in place of 0.0320.)</p></li>
+<li><p>No rounding is done of floating point values except to the extent required to fit within PostgreSQL's 8-byte float type. (Note that all floating point values <em>may</em> be specifed with an exponent; for example 3.20E-2 in place of 0.0320.)</p></li>
 </ol>
 </div>
 </div>
@@ -297,11 +307,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In the case of unsuccessful API calls, the response will contain information about the types of errors that caused the call to be unsuccessful. These errors can be classified as follows:</p>
 <div id="authorization-errors" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> Authorization Errors</h3>
-<p>If an invalid API key is given, or if the given key is for a user who isn’t authorized to perform the given action, an authorization error is returned. (To do: Distinguish between authentication and authorization.)</p>
+<p>If an invalid API key is given, or if the given key is for a user who isn't authorized to perform the given action, an authorization error is returned. (To do: Distinguish between authentication and authorization.)</p>
 </div>
 <div id="lookup-errors" class="section level3">
 <h3><span class="header-section-number">6.3.2</span> Lookup Errors</h3>
-<p>If a citation, site, species, or treatment is specified that doesn’t match exactly one item in the database, a lookup error occurs. This causes the whole data set to be returned in tree form as <code>annotated_post_data</code>. The annotations will be the error items next to the data item that caused the error.</p>
+<p>If a citation, site, species, or treatment is specified that doesn't match exactly one item in the database, a lookup error occurs. This causes the whole data set to be returned in tree form as <code>annotated_post_data</code>. The annotations will be the error items next to the data item that caused the error.</p>
 </div>
 <div id="schema-validation-errors" class="section level3">
 <h3><span class="header-section-number">6.3.3</span> Schema Validation Errors</h3>
@@ -331,7 +341,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="known-bugs" class="section level2">
 <h2><span class="header-section-number">6.5</span> Known Bugs</h2>
 <ol style="list-style-type: decimal">
-<li><p>It’s too easy to make a mistake without realizing it.</p>
+<li><p>It's too easy to make a mistake without realizing it.</p>
 <p>Examples:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>If you misspell a trait variable name in the heading, that column will simple be ignored; no error will occur if there exists at least one valid trait variable in the heading.</p></li>
@@ -377,12 +387,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -394,6 +403,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
